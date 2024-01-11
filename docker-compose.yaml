@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  piepline-frontend:
+    build: ./
+    container_name: pipeline_c
+    ports:
+     - '3000:3000'
+    volumes:
+     - ./pipeline-frontend:/app
+     - ./app/node_modules
+    stdin_open: true
+    tty: true
